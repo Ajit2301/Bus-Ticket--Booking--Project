@@ -1,4 +1,23 @@
-.App {
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-image: url('D:\ajith\bus-ticket-booking\src\images\background.jpg'); 
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
+  margin: 0;
+
+}
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

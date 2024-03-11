@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Components/Home';
+import Booking from './Components/Booking';
+import Confirmation from './Components/Confirmation';
+import Login from './Components/Login'; // Import the Login component
+import Signup from './Components/Signup'; // Import the Signup component
+import './Nav.css'
+import './App.css'
+import './Home.css'
+import './Booking.css'
+import './Confirmation.css'
+import './Login.css'
+import './Signup.css'
 
-function App() {
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          
+          <ul>
+            <li>
+              AKTRAVELS
+            </li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/booking">Booking</Link>
+            </li>
+            <li>
+              <Link to="/confirmation">Confirmation</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>
+          </ul>
+        </nav>
+
+      
+
+        <Routes>
+          <Route path="/"  element={<Home />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
+
